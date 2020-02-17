@@ -9,14 +9,14 @@ body{
 }
 .header_bg{
     height: 120px;
-    background-color: #033B4E; 
+    background-color: rgba(3, 59, 78, 0.801); 
     /* background-image: url("../images/bg.jpg"); */
     background-size: 100%;
     background-position: top;
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 997;
+    z-index: 1;
 }
 .pentagon{
     width: 20%;
@@ -59,7 +59,7 @@ body{
     position: relative;
 }
 .nav>ul>li>a{
-    font-size: 18px;
+    font-size: 22px;
     font-family: 'Cormorant SC', serif;
     display: block;
     color: #B5945C;
@@ -135,6 +135,7 @@ nav li:last-child:hover a::after{
     .menu_icon{
         display: block;
         color: #B5945C;
+        margin-right: 20px;
     }
     .header{
         flex-wrap: wrap;

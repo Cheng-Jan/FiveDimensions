@@ -4,6 +4,9 @@ $(".logo_click").click(function () {
 
     if(clk=="on") {
         console.log(this);
+
+        $(".clk-txt").fadeOut();
+
         $(this).css('background-image', 'url(' + 'images/logo_click.png' + ')');
         $(this).css({"left": "38.75%"});
 
@@ -22,6 +25,9 @@ $(".logo_click").click(function () {
 
     } else {
         console.log(this);
+
+        $(".clk-txt").fadeIn();
+
         $(this).css('background-image', 'url(' + 'images/r-logo.png' + ')');
         $(this).css({"left":"37.5%"});
 

@@ -31,12 +31,12 @@
     margin: 5%;
     height: 50%;
     padding: 5% 0px 5% 0px;
-    border-radius: 20px;
+    border-radius: 8px;
     background-color: #B5945C;
 }
 .card-area img {
     margin: auto;
-    border-radius: 20px;
+    border-radius: 8px;
     width: 80%;
 }
 .m-card>h3 {
@@ -146,7 +146,7 @@
         /* display: flex; */
         width: 100%;
         /* width: calc(65% / 5 ); */
-        height: 32%;
+        height: 33%;
         border-radius: 5px;
         background-color: #B5945C;
         position: absolute;
