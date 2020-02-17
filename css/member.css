@@ -1,0 +1,204 @@
+.members .title {
+    position: absolute;
+    top: 1%;
+    left: 10%;
+    font-size: 50px;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+}
+.m-member-title {
+    /* position: relative;
+    top: -30%; */
+    padding-bottom: 32px;
+    font-size: 32px;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 900;
+    letter-spacing: 0.3em;
+    margin-top: -100px;
+}
+.card-area {
+    /* margin-top: -30%; */
+    width: 50%;
+    height: 50%;
+}
+.m-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.c-img {
+    margin: 5%;
+    height: 50%;
+    padding: 5% 0px 5% 0px;
+    border-radius: 20px;
+    background-color: #B5945C;
+}
+.card-area img {
+    margin: auto;
+    border-radius: 20px;
+    width: 80%;
+}
+.m-card>h3 {
+    color: #033B4E; 
+    background-color: #B5945C;
+    font-size: 26px;
+    text-align: center;
+    margin: 60px auto;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 24px;
+    width: 80%;
+    letter-spacing: 0.2em;
+}
+.m-card>p {
+    color: #fff;
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 32px 0px 0px 0px;
+    font-family: 'Microsoft JhengHei';
+    letter-spacing: 0.2em;
+    line-height: 40px;
+    padding: 0 28px;
+}
+
+@media screen and (max-width: 414px) {
+    .m-member-title {
+        font-size: 28px;
+        margin-top: -72px;
+    }
+    .m-card>h3 {
+        font-size: 22px;
+        margin: 32px auto;
+    }
+    .m-card>p {
+        font-size: 16px;
+        line-height: 32px;
+        padding: 0 16px;
+    }
+}
+
+/* ------------------------------ */
+/* ------------------------------ */
+/* ---------memberStart---------- */
+/* ------------------------------ */
+/* ------------------------------ */
+#member {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 59, 78, 0.8);
+}
+.members {
+    display: none;
+    width: 80%;
+    height: auto;
+}
+.m_img_area {
+    width: 100%;
+    height: 10%;
+}
+.m_img {
+    width: 100%;
+    height: 10%;
+    border-radius: 15px;
+    background-color: #B5945C;
+    cursor: pointer;
+}
+.m_img>div {
+    width: 80%;
+    height: 80%;
+}
+.m_name {
+    font-size: 24px;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 600;
+    width: 10%;
+    letter-spacing: 0.2em;
+}
+.discribe {
+    display: none;
+    font-size: 1.0rem;
+}
+.disc-start {
+    top: 20%;
+}
+.disc-end {
+    top: 71%;
+}
+
+@media screen and (min-width: 769px) {
+    .members {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%;
+        height: 100%;
+        margin-left: 5%;
+    }
+    .m_img_area {
+        position: relative;
+        /* width: 100%; */
+        width: calc(85% / 5 );
+        height: 100%;
+    }
+    .m_img {
+        /* display: flex; */
+        width: 100%;
+        /* width: calc(65% / 5 ); */
+        height: 32%;
+        border-radius: 5px;
+        background-color: #B5945C;
+        position: absolute;
+        top: 33%;
+    }
+    @media screen and (max-width: 1440px) {
+        .m_img {
+            height: 26%;
+        }
+    }
+    .m_img>div {
+        /* max-width: 145px; */
+        width: 84.5%;
+        /* height: 154px; */
+        height: 90%;
+        border-radius: 4px;
+        /* background-color: lightgray; */
+        margin: auto;
+        margin-top: 10%;
+        margin-bottom: 10%;
+
+    }
+    .m_img>div>img {
+        width: 100%;
+        border-radius: 4px;
+    }
+
+    .m_name {
+        width: 100%;
+        /* width: calc(65% / 5 ); */
+        position: absolute;
+        top: 65%;
+    }
+    .discribe {
+        display: none;
+        position: absolute;
+        width: 100%;
+        /* width: calc(65% / 5 ); */
+        font-size: 18px;
+        font-family: "Microsoft JhengHei";
+        color: #fff;
+        font-weight: 100;
+        letter-spacing: 0.2em;
+        line-height: 32px;
+    }
+    .disc-start {
+        top: 18%;
+    }
+    .disc-end {
+        top: 73%;
+    }
+    .m-card>p {
+        margin: 32px 40px;
+    }
+}

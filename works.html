@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WORKS</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css">
+    <link rel="stylesheet" href="js/WOW-master/css/libs/animate.css">
+    <link rel="stylesheet" href="css/works.css">
+</head>
+<body>
+    <div class="real_header">
+        <div class="header_bg">
+        </div>
+        <div class="pentagon">
+            <img src="images/pentagon.svg" alt="">
+        </div>
+        <div class="header">
+            <div class="logo"><a href="index.html"><img src="images/logo_01.svg" alt="" srcset=""></a></div>
+            <div class="menu_icon">
+                <div class="icon">
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="index.html">Service</a></li>
+                    <li><a href="index.html">Member</a></li>
+                    <li><a href="index.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="mask"></div>
+    <div class="sub_header">
+        <div class="container">
+            <h1 class="title">#WORKS</h1>
+            <ul class="sub_nav">
+                <li><a href="javascrip:void(0)" class="bigFont line_1 line_2">ALL</a></li>
+                <li><a href="javascrip:void(0)">Web</a></li>
+                <li><a href="javascrip:void(0)">Graph</a></li>
+            </ul>
+        </div>
+    </div>
+    <main class="main">
+        
+    </main>
+    <div class="next_area">
+        <div class="next">Next Page</div>
+    </div>
+    <ul class="number_area">
+        <li class="number click_1">1</li>
+        <li class="number">2</li>
+        <li class="number">3</li>
+    </ul>
+    <footer class="footer">
+        <div>Tel : 04-28543980</div>
+        <div>E-mail : 5D_Design@gmail.com</div>
+        <div>Address : 台中市南區興大路145號</div>
+    </footer>
+    <div class="copyright">© 5D Design. 2020</div>
+    <div class="pageToTop"><a href="javascript:void(0)">Top</a></div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/WOW-master/dist/wow.min.js"></script>
+    <script>
+        new WOW().init();
+
+        $(".menu_icon").click(function(){
+            $(".icon div:first-child").toggleClass("barTurn_1");
+            $(".icon div:last-child").toggleClass("barTurn_2");
+            $(".icon").toggleClass("cc");
+            $(".nav").slideToggle();
+        }); //menu control end
+
+        $(".sub_nav li").click(function(){
+                $(this).siblings().find("a").removeClass("active");
+                $(this).siblings().find("a").removeClass("bigFont");
+                $(this).siblings().find("a").removeClass("line_1");
+                $(this).siblings().find("a").removeClass("line_2");
+            if($(this).hasClass("active")){               
+                $(this).find("a").removeClass("active");
+                $(this).find("a").removeClass("bigFont");
+                $(this).find("a").removeClass("line_1");
+                $(this).find("a").removeClass("line_2");
+            }else{
+                $(this).find("a").addClass("active");
+                $(this).find("a").addClass("bigFont");
+                $(this).find("a").addClass("line_1");
+                $(this).find("a").addClass("line_2");
+            }
+        }); //sub_menu control end
+
+        $(window).scroll(function(){
+            if($(window).scrollTop() >= 400){
+                $(".pageToTop").fadeIn();
+            }else{
+                $(".pageToTop").fadeOut();
+            }
+        });
+        
+        $(".pageToTop").click(function(){
+                $("html, body").animate({scrollTop:$(".real_header").offset().top});
+        }); //scroll to top end
+
+        $(window).scroll(function(){
+            let change_width = $(window).scrollTop();
+            $(".mask").width( 100 - change_width / 26 + "%" );
+        }); // background animation end
+        
+        $(".number").click(function(){
+                $(this).siblings().removeClass("active");
+                $(this).siblings().removeClass("click_1");
+            if($(this).hasClass("active")){               
+                
+            }else{
+                $(this).addClass("active");
+                $(this).addClass("click_1");
+            }
+        }); //numbers click end
+
+        $(".main").load("ajax/page_1.html");
+
+        $(".sub_nav li").click(function(e){
+            let x = $(this).index();
+            switch (x) {
+                case 0:
+                    $(".main").load("ajax/page_1.html");
+                    $("html, body").animate({scrollTop:$(".main").offset().top-100});
+                    $(".next_area").show();
+                    $(".number_area").show();
+                    $(".number").removeClass("click_1");
+                    $(".number:first-child").addClass("click_1");
+                    break;
+                case 1:
+                    $(".main").load("ajax/web_works.html");
+                    $("html, body").animate({scrollTop:$(".main").offset().top-100});
+                    $(".next_area").hide();
+                    $(".number_area").hide();
+                    break;
+                case 2:
+                    $(".main").load("ajax/graph_works.html");
+                    $("html, body").animate({scrollTop:$(".main").offset().top-100});
+                    $(".next_area").hide();
+                    $(".number_area").hide();
+                    break;
+            }
+        }); //sort switch works end
+
+        let np = 1;
+
+        $(".next").click(function (e) {
+            if( np == 1 ){
+                np = np+1;
+                $(".main").load("ajax/page_2.html");
+                $("html, body").animate({scrollTop:$(".main").offset().top-100});
+                $(".number").siblings().removeClass("click_1");
+                $(".number:nth-child(2)").addClass("click_1");
+            }else if( np == 2 ){
+                $(".main").load("ajax/page_3.html");
+                $("html, body").animate({scrollTop:$(".main").offset().top-100});
+                $(".number").siblings().removeClass("click_1");
+                $(".number:nth-child(3)").addClass("click_1");
+                $(".next_area").hide();
+            }else{
+                
+            }
+        }); //next_page switch products end
+
+        $('.number').click(function (e) {
+            // e.preventDefault()
+            $(this).siblings().removeClass("clicK_1");
+            $(this).addClass("click_1");
+            $("html, body").animate({scrollTop:$(".main").offset().top-100});
+            
+            let x = $(this).index();
+
+            switch (x) {
+                case 0:
+                    $(".main").load("ajax/page_1.html");
+                    $(".next_area").show();
+                    np = 1;
+                    break;
+                case 1:
+                    $(".main").load("ajax/page_2.html");
+                    $(".next_area").show();
+                    np = 2;
+                    break;
+                case 2:
+                    $(".main").load("ajax/page_3.html");
+                    $(".next_area").hide();
+                    np = 3;
+                    break;
+            }
+        }); //number switch products end
+    </script>
+</body>
+</html>

@@ -1,0 +1,717 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant+SC|Noto+Serif|Noto+Serif+TC|Raleway&display=swap');
+body{
+    position: relative;
+    background-image: url("../images/bg_2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.mask{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: -999;
+}
+.real_header{
+    position: relative;
+    overflow: hidden;
+}
+.header_bg{
+    height: 87px;
+    background-color: #033B4E;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 997;
+}
+.pentagon{
+    width: 20%;
+    z-index: 998;
+    position: fixed;
+    top: -150px;
+    right: -10px;
+}
+.header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 86px;
+    
+}
+.logo{
+    width: 82px;;
+    margin: 0 40px;
+    padding: 11px 0;
+    margin-left: 100px;
+}
+
+.nav{
+    z-index: 999;
+    width: 50%;
+}
+.nav>ul {
+    display: flex;
+}
+
+.nav>ul>li{
+    width: 25%;
+    position: relative;
+}
+.nav>ul>li>a{
+    font-size: 18px;
+    font-family: 'Cormorant SC', serif;
+    display: block;
+    color: #B5945C;
+    text-decoration: none;
+    letter-spacing: 0.2em;
+}
+.nav>ul>li>a::first-letter{
+    font-size: 20px;
+}
+.nav a::after{
+    content: "";
+    width: 0px;
+    height: 1px;
+    display: block;
+    position: absolute;
+    left: 40px;
+    top: 150%;
+    background: #B5945C;
+    transition: 0.5s;
+}
+.nav a:hover::after{
+    left: 0px;
+    width: 80px;
+}
+.nav li:first-child:hover a::after{
+    width: 70px;
+}
+nav li:last-child:hover a::after{
+    width: 90px;
+}
+.menu_icon{
+    display: none;
+    overflow: hidden;
+    padding: 15px;
+}
+.icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 15px;;
+}
+.icon div{
+    height: 1px;
+    width: 30px;
+    background-color: #B5945C;
+    transition: 0.5s;
+}
+.icon .barTurn_1{
+    width: 45px;
+    transform: rotate(45deg);
+}
+.icon .barTurn_2{
+    width: 45px;
+    transform: rotate(-45deg);
+}
+.cc{
+    height: 30px;
+    justify-content: center;
+}
+/* @media screen and ( max-width:1200px ){
+    .pentagon{
+        top: -110px;
+    }
+}
+@media screen and ( max-width:992px ){
+    .pentagon{
+        top: -70px;
+    }
+} */
+@media screen and ( max-width:1024px ){
+    .pentagon{
+        top: -223px;
+        width: 30%;
+        right: -70px;
+    }
+    .logo{
+        margin: 0 40px;
+    }
+    .menu_icon{
+        display: block;
+        color: #B5945C;
+        margin: 0 40px;
+    }
+    .header{
+        flex-wrap: wrap;
+    }
+    .nav{
+        display: none;
+        width: 100%;
+        background-color: #033B4E;
+        height: calc( 100vh - 80px );
+    }
+    .nav>ul {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .nav>ul>li{
+        width: 100%;
+        height: calc( (100vh - 86px) / 4 );
+        line-height: 130px;
+    }
+    .nav a::after{
+        display: none;
+    }
+}
+@media screen and ( max-width:768px ){
+    .pentagon{
+        top: -147px;
+        width: 30%;
+        right: -70px;
+    }
+    .menu_icon{
+        margin: 0 20px;
+    }
+}
+@media screen and ( max-width:414px ){
+    .pentagon{
+        top: -39px;
+        right: -25px;
+    }
+    .logo{
+        margin: 0 20px;
+    }
+    .menu_icon{
+        margin: 0 10px;
+    }
+}
+@media screen and ( max-width:375px ){
+    .pentagon{
+        top: -23px;
+        right: -25px;
+    }
+}
+
+/* ======================header end====================== */
+/* ======================header end====================== */
+
+.sub_header{
+    margin-top: 86px;
+}
+.container{
+    width: 90%;
+    max-width: 1500px;
+    margin: auto;
+    padding: 200px 0 100px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title{
+    font-family: 'Cormorant SC', serif;
+    color: #B5945C;
+    letter-spacing: 0.2em;
+    font-size: 130px;
+}
+.sub_nav{
+    align-self: flex-end;
+    display: flex;
+    width: 35%;
+    margin: 0;
+}
+.sub_nav li{
+    width: 33%;
+    text-align: center;
+    line-height: 50px;
+    position: relative;
+}
+.sub_nav a{
+    display: block;
+    font-family: 'Cormorant SC', serif;
+    color: #B5945C;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    transition: 0.4s;
+}
+.sub_nav a:hover{
+    font-size: 26px;
+    color: rgb(109, 78, 25);
+}
+.sub_nav li a::before{
+    content: "";
+    display: block;
+    position: absolute;
+    background: #B5945C;
+    width: 0px;
+    height: 1px;
+    top: 25px;
+    left: -20px;
+    transition: 0.5s;
+}
+.sub_nav li a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    background: #B5945C;
+    width: 0px;
+    height: 1px;
+    top: 25px;
+    right: -20px;
+    transition: 0.5s;
+}
+.sub_nav li:hover a::before{
+    width: 15px;
+    left: 0px;
+}
+.sub_nav li:hover a::after{
+    width: 15px;
+    right: 0px;
+}
+.sub_nav li a.line_1::before{
+    width: 15px;
+    left: -5px;
+}
+.sub_nav li a.line_2::after{
+    width: 15px;
+    right: 0px;
+}
+.bigFont{
+    font-size: 26px;
+}
+@media screen and ( max-width:1024px ){
+    .container{
+        padding: 150px 0 80px 0;
+        flex-direction: column;
+    }
+    .title{
+        font-size: 85px;
+    }
+    .sub_nav{
+        align-self: center;
+        width: 50%;
+        margin: 30px;
+    }
+}
+@media screen and ( max-width:540px ){
+    .container{
+        padding-bottom: 50px;
+    }
+    .title{
+        font-size: 65px;
+    }
+    .sub_nav{
+        width: 100%;
+    }
+
+}
+
+/* =====================sub_header end===================== */
+/* =====================sub_header end===================== */
+.main{
+    z-index: -998;
+}
+.works_area .container{
+    padding: 0;
+    height: 540px;
+    margin: 20px auto;
+    max-width: 1440px;
+    width: 85%;
+}
+.works_area .container>div:first-child{
+    align-self: flex-start;
+}
+.works_area .container>div:last-child{
+    align-self: flex-end;
+}
+.works{
+    width: 46%;
+}
+.sort{
+    position: relative;
+    font-family: 'Cormorant SC', serif;
+    letter-spacing: 0.1em;
+    padding: 15px;
+    float: right;
+    font-size: 18px;
+    color: #B5945C;
+}
+.sort::first-letter{
+    font-size: 22px;
+}
+.sort::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    left: -105px;
+    top: 50%;
+    background-color: rgb(221, 221, 221);
+}
+.photo{
+    width: 100%;
+    clear: both;
+    position: relative;
+    transition: 0.5s ease-out;
+}
+.photo img{
+    width: 100%;
+    vertical-align: bottom;
+}
+.photo div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(34, 34, 34);
+    top: 0;
+    left: 0;
+    transition: 0.5s ;
+    text-align: center;
+    color: white;
+    font-family: 'Cormorant SC', serif;
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.photo span{
+    display: block;
+    margin: 5px;
+}
+.photo span:first-child{
+    font-size: 16px;
+}
+.photo div::first-letter{
+    font-size: 28px;
+}
+.photo:hover{
+    transform: scale(1.05);
+}
+.photo:hover div{
+    opacity: 0.6;
+}
+.photo::before{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 100px;
+    top: 15px;
+    left: -35px;
+    background-color: rgb(141, 141, 141);
+    transform: rotate(-45deg);
+    z-index: 1;
+    transition: 0.3s;
+}
+.photo::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    bottom: 15px;
+    right: -35px;
+    background-color: rgb(141, 141, 141);
+    transform: rotate(-45deg);
+    z-index: 1;
+    transition: 0.3s;
+}
+.photo:hover::before{
+    width: 0px;
+    top: -20px;
+    left: 50px;
+}
+.photo:hover::after{
+    width: 0px;
+    bottom: -20px;
+    right: 50px;
+}
+.description{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+.name{
+    position: relative;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 20px;
+    letter-spacing: 0.4em;
+    color: rgb(126, 126, 126);
+}
+.name::first-letter{
+    font-size: 24px;
+    color: rgb(90, 90, 90);
+}
+.name::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 160px;
+    height: 1px;
+    background-color: rgb(221, 221, 221);
+    bottom: 40%;
+    right: -170px;
+    transition: 0.4s;
+}
+.date{
+    font-family: 'Cormorant SC', serif;
+    letter-spacing: 0.1em;
+    font-size: 16px;
+    color: rgb(126, 126, 126);
+}
+.date::first-letter{
+    font-size: 20px;
+}
+@media screen and ( max-width:1024px ){
+    .works_area .container{
+        flex-direction: column;
+        height: 900px;
+    }
+    .works_area .container>div:first-child{
+        align-self: center;
+    }
+    .works_area .container>div:last-child{
+        align-self: center;
+    }
+    .works{
+        width: 70%;
+    }
+}
+@media screen and ( max-width:768px ){
+    .works_area .container{
+        height: 700px;
+    }
+}
+@media screen and ( max-width:414px ){
+    .works_area .container{
+        height: 630px;
+    }
+    .works{
+        width: 100%;
+    }
+    .photo::before{
+        width: 60px;
+        top: 5px;
+        left: -25px;
+    }
+    .photo::after{
+        width: 60px;
+        bottom: 5px;
+        right: -25px;
+    }
+    .name::after{
+        height: 0;
+    }
+    .sort::before{
+        width: 80px;
+        left: -80px;
+    }
+}
+@media screen and ( max-width:414px ){
+    .works_area .container{
+        height: 600px;
+    }
+}
+/* =============================main end============================= */
+/* =============================main end============================= */
+.next{
+    position: relative;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    margin: 150px auto 50px auto;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Cormorant SC', serif;
+    letter-spacing: 0.1em;
+    color: rgb(180, 180, 180);
+    transition: 0.4s;
+    cursor: pointer;
+}
+.next::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 25px;
+    width: 150px;
+    height: 1px;
+    background-color: rgb(180, 180, 180);
+    transition: 0.4s;
+}
+.next::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 25px;
+    width: 150px;
+    height: 1px;
+    background-color: rgb(180, 180, 180);
+    transition: 0.4s;
+}
+.next:hover{
+    color: rgb(0, 0, 0);
+}
+.next:hover::before{
+    left: 0;
+    background-color: rgb(0, 0, 0);
+}
+.next:hover::after{
+    right: 0;
+    background-color: rgb(0, 0, 0);
+}
+
+/* =============================next_area end============================= */
+/* =============================next_area end============================= */
+.number_area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.number{
+    position: relative;
+    width: 40px;
+    height: 50px;
+    margin: 10px;
+    text-align: center;
+    line-height: 50px;
+    font-family: 'Cormorant SC', serif;
+    font-size: 20px;
+    color: rgb(180, 180, 180);
+    cursor: pointer;
+}
+.number::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 5px;
+    width: 30px;
+    height: 1px;
+    background-color: rgb(180, 180, 180);
+    transition: 0.2s;
+}
+.number::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 8px;
+    right: 5px;
+    width: 30px;
+    height: 1px;
+    background-color: rgb(180, 180, 180);
+    transition: 0.2s;
+}
+.number:hover{
+    color: rgb(0, 0, 0);
+}
+.number:hover::before{
+    top: 0;
+    background-color: rgb(0, 0, 0);
+}
+.number:hover::after{
+    bottom: 0;
+    background-color: rgb(0, 0, 0);
+}
+.click_1{
+    color: rgb(0, 0, 0);
+}
+.number.click_1::before{
+    top: 0;
+    background-color: rgb(0, 0, 0);
+}
+.number.click_1::after{
+    bottom: 0;
+    background-color: rgb(0, 0, 0);
+}
+
+/* =============================number_area end============================= */
+/* =============================number_area end============================= */
+.footer{
+    position: relative;
+    margin-top: 300px;
+    width: 100%;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Noto Serif TC', serif;
+    letter-spacing: 0.2em;
+    font-size: 12px;
+}
+.footer::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: -50px;
+    width: 100%;
+    height: 100px;
+    border-top: 1px solid #B5945C;
+    background-color: rgb(255, 255, 255);
+    transform: rotate(3deg);
+}
+.footer>div{
+    margin: 5px;
+}
+
+/* =============================number_area end============================= */
+/* =============================number_area end============================= */
+.copyright{
+    font-family: 'Noto Serif TC', serif;
+    letter-spacing: 0.2em;
+    font-size: 12px;
+    text-align: center;
+    padding: 15px;
+    background-color: #fff;
+}
+
+
+/* #033B4E */
+/* #B5945C */
+
+.pageToTop{
+    display: none;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    line-height: 48px;
+    background-image: url("../images/pentagon_2.svg");
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+    text-align: center;
+    transition: 0.5s;
+}
+.pageToTop a{
+    display: block;
+    font-family: 'Cormorant SC', serif;
+    text-decoration: none;
+    color: #B5945C;
+    font-size: 18px;
+    transition: 0.5s;
+}
+.pageToTop:hover{
+    background-image: url("../images/pentagon_3.svg");
+    transform: rotate(90deg);
+}
+.pageToTop:hover a{
+    color: white;
+    transform: rotate(-90deg);
+}

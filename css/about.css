@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900|Noto+Serif+TC:200,300,400,500,600,700,900&display=swap');
+
+.about_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 59, 78, 0.8);
+}
+
+.about_T {
+    font-size: 50px;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 700;
+    float: left;
+    padding-top: 10px;
+    padding-left: 200px;
+    letter-spacing: 0.3em;
+}
+@media screen and (max-width: 768px) {
+    .about_T {
+        float: none;
+        font-size: 20px;
+        padding-left: 40px;
+    }
+}
+
+.logo_click {
+    /* display: none; */
+    background: url('../images/r-logo.png') no-repeat center;
+    /* background: url('../images/logo_click.png') no-repeat center; */
+    background-size: contain;
+    width: 25%;
+    height: 38%;
+    margin: 0 auto;
+    position: absolute;
+    top: 25%;
+    left: 37.5%;
+    z-index: 10000;
+    cursor: pointer;
+    
+}
+
+.about1 {
+    background: url('../images/1-brazen.png') no-repeat left;
+    background-size: contain;
+    width: 12%;
+    height: 12%;
+    margin: 0 auto;
+    transition: 1s;
+    position: absolute;
+    top: 38%;
+    left: 44.2%;
+    opacity: 0;
+    
+}
+
+.about_h:hover {
+    width: 23%;
+    height: 23%;
+}
+
+.flex_container {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.flex_title {
+    font-size: 24px;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 600;
+    position: absolute;
+    width: 100%;
+    transition: 1s;
+    order: 1;
+    letter-spacing: 0.3em;
+}
+
+.about2 {
+    background: url('../images/4-cautious.png') no-repeat center;
+    background-size: contain;
+    width: 12%;
+    height: 12%;
+    margin: 0 auto;
+    transition: 1s;
+    position: absolute;
+    top: 38%;
+    left: 44.2%;
+    opacity: 0;
+}
+
+.about3 {
+    background: url('../images/5-keen.png') no-repeat center;
+    background-size: contain;
+    width: 12%;
+    height: 12%;
+    margin: 0 auto;
+    transition: 1s;
+    position: absolute;
+    top: 38%;
+    left: 43%;
+    opacity: 0;
+}
+
+.about4 {
+    background: url('../images/3-creative.png') no-repeat center;
+    background-size: contain;
+    width: 12%;
+    height: 12%;
+    margin: 0 auto;
+    transition: 1s;
+    position: absolute;
+    top: 37.9%;
+    left: 45.2%;
+    opacity: 0;
+}
+
+.about5 {
+    background: url('../images/4-cautious.png') no-repeat center;
+    background-size: contain;
+    width: 12%;
+    height: 12%;
+    margin: 0 auto;
+    transition: 1s;
+    position: absolute;
+    top: 37.9%;
+    left: 45.2%;
+    opacity: 0;
+}
+.about1 .flex_title {
+    position: absolute;
+    top: -35%;
+    left: 0%;
+}
+.about1:hover .flex_title {
+    top: 12%;
+    left: 30%;
+    color: #033B4E;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+
+.about2 .flex_title {
+    position: absolute;
+    top: -37%;
+    left: 0%;
+}
+.about2:hover .flex_title {
+    top: 12%;
+    left: 22%;
+    color: #033B4E;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+
+.about3 .flex_title {
+    position: absolute;
+    top: -37%;
+    left: 64%;
+}
+.about3:hover .flex_title {
+    top: 12%;
+    left: 42%;
+    color: #033B4E;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+
+.about4 .flex_title {
+    position: absolute;
+    top: -37%;
+    left: 0%;
+}
+.about4:hover .flex_title {
+    top: 12%;
+    left: 22%;
+    color: #033B4E;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+
+.about5 .flex_title {
+    position: absolute;
+    top: -37%;
+    left: 0%;
+}
+.about5:hover .flex_title {
+    top: 12%;
+    left: 22%;
+    color: #033B4E;
+    font-weight: bold;
+    font-size: 32px;
+}
+.flex_text {
+    font-size: 20px;
+    font-family: "Microsoft JhengHei";
+    font-weight: lighter;
+    color: white;
+    opacity: 0;
+    transition: 1s;
+    white-space: nowrap;
+    line-height: 28px;
+    letter-spacing: 0.1em;;
+}
+
+.about_h:hover .flex_text{
+    position: absolute;
+    top: 72px;
+    left: 50px;
+    opacity: 1;
+}
+@media screen and (min-width: 1760px) {
+    .about_h:hover .flex_text{
+        top: 86px;
+    }
+}
+
+
+/* ---------手機板的css-------- */
+/* ---------手機板的css-------- */
+/* ---------手機板的css-------- */
+.mobile_about_container {
+    width: 100%;
+    padding-top: 32px;
+    padding-bottom: 64px;
+    font-size: 20px;
+    background-color: #033B4E; 
+}
+.mobile-title {
+    font-size: 32px;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 900;
+    text-align: center;
+    padding-bottom: 40px;
+    letter-spacing: 0.3em;
+}
+.about_area {
+    padding: 5% 15%;
+}
+.about-title {
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 900;
+    font-size: 26px;
+    letter-spacing: 0.2em;
+    
+}
+.about-content {
+    font-size: 20px;
+    font-family: 'Microsoft JhengHei';
+    font-weight: normal;
+    color: #fff;
+    padding-top: 24px;
+    line-height: 40px;
+    padding-top: 6%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #B5945C;
+    letter-spacing: 0.2em;
+}
+.about_area:last-child .about-content {
+    border-bottom: none;
+}
+@media screen and (max-width: 414px) {
+    .mobile-title {
+        font-size: 28px;
+    }
+    .about-title {
+        font-size: 22px;
+    }
+    .about-content {
+        font-size: 16px;
+    }
+}

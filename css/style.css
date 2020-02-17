@@ -1,0 +1,144 @@
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+TC&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cormorant+SC|Noto+Serif|Noto+Serif+TC|Raleway&display=swap');
+.ch_font {
+    /* font-family: 'Noto Serif TC', serif; */
+    font-family: 'Cormorant SC', serif;
+}
+.sub_font {
+    font-family: "Microsoft JhengHei";
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+.fz_12 {
+    font-size: 1.5rem;
+}
+.mt1 {
+    margin-top: 24px;
+}
+.f_center {
+    text-align: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #B5945C;
+    font-size: 48px;
+}
+
+#home>img, #about>img {
+    position: relative;
+    top: -5%;
+}
+
+
+.onepage-pagination {
+    z-index: -999;
+}
+
+.main {
+    position: absolute;
+    height: 88%;
+    top: 12%;
+    width: 100%;
+    z-index: 5;
+}
+
+.arrow {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 64px);
+    position: absolute;
+    top: calc(50% - 16px);
+    font-size: 32px;
+    z-index: 999;
+    padding: 0px 32px;
+}
+
+.arrow>a {
+    color: #B5945C;
+    display: block;
+    text-decoration: none;
+}
+
+#contact {
+    margin: 0 auto;
+}
+#contact img {
+    padding-top: 200px;
+}
+.info {
+    padding-top: 24px;
+    padding-bottom: 12px;
+    
+}
+
+#contact>div>p {
+    font-family: 'Cormorant SC', serif;
+    font-size: 20px;
+    font-weight: bolder;
+    line-height: 40px;
+
+}
+#contact img {
+    width: 20%;
+}
+@media screen and (max-width: 768px) {
+    #contact img {
+        padding-top: 150px;
+        width: 50%;
+    }
+    .info {
+        width: 300px;
+    }
+}
+
+.btn {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn>a {
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+    color: #B5945C;
+    border: 1px solid #B5945C;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 18px;
+}
+.btn>a:hover {
+    background-color: #B5945C;
+}
+.btn>a:hover i {
+    color: #033B4E;
+}
+
+.btn>a>i {
+    display: block;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+@media screen and (max-width: 414px) {
+    #contact img {
+        padding-top: 100px;
+    }
+    #contact>div>p {
+        font-size: 13px;
+        line-height: 32px;
+    }
+    .info {
+        width: 200px;
+    }
+}
